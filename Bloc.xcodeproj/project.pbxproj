@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		889E6EF52904208900405665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E6EF42904208900405665 /* AppDelegate.swift */; };
+		889E6EF72904208900405665 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E6EF62904208900405665 /* SceneDelegate.swift */; };
+		889E6EF92904208900405665 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E6EF82904208900405665 /* ViewController.swift */; };
+		889E6EFC2904208900405665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889E6EFA2904208900405665 /* Main.storyboard */; };
+		889E6EFF2904208900405665 /* Bloc.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 889E6EFD2904208900405665 /* Bloc.xcdatamodeld */; };
+		889E6F012904208A00405665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 889E6F002904208A00405665 /* Assets.xcassets */; };
+		889E6F042904208A00405665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889E6F022904208A00405665 /* LaunchScreen.storyboard */; };
+		889E6F0F2904208B00405665 /* BlocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E6F0E2904208B00405665 /* BlocTests.swift */; };
+		889E6F192904208B00405665 /* BlocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E6F182904208B00405665 /* BlocUITests.swift */; };
+		889E6F1B2904208B00405665 /* BlocUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E6F1A2904208B00405665 /* BlocUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		889E6F0B2904208B00405665 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 889E6EE92904208800405665 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 889E6EF02904208900405665;
+			remoteInfo = Bloc;
+		};
+		889E6F152904208B00405665 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 889E6EE92904208800405665 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 889E6EF02904208900405665;
+			remoteInfo = Bloc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		889E6EF12904208900405665 /* Bloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bloc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		889E6EF42904208900405665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		889E6EF62904208900405665 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		889E6EF82904208900405665 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		889E6EFB2904208900405665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		889E6EFE2904208900405665 /* Bloc.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bloc.xcdatamodel; sourceTree = "<group>"; };
+		889E6F002904208A00405665 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		889E6F032904208A00405665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		889E6F052904208A00405665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		889E6F0A2904208B00405665 /* BlocTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlocTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		889E6F0E2904208B00405665 /* BlocTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocTests.swift; sourceTree = "<group>"; };
+		889E6F142904208B00405665 /* BlocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		889E6F182904208B00405665 /* BlocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocUITests.swift; sourceTree = "<group>"; };
+		889E6F1A2904208B00405665 /* BlocUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		889E6EEE2904208900405665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		889E6F072904208B00405665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		889E6F112904208B00405665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		889E6EE82904208800405665 = {
+			isa = PBXGroup;
+			children = (
+				889E6EF32904208900405665 /* Bloc */,
+				889E6F0D2904208B00405665 /* BlocTests */,
+				889E6F172904208B00405665 /* BlocUITests */,
+				889E6EF22904208900405665 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		889E6EF22904208900405665 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				889E6EF12904208900405665 /* Bloc.app */,
+				889E6F0A2904208B00405665 /* BlocTests.xctest */,
+				889E6F142904208B00405665 /* BlocUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		889E6EF32904208900405665 /* Bloc */ = {
+			isa = PBXGroup;
+			children = (
+				889E6EF42904208900405665 /* AppDelegate.swift */,
+				889E6EF62904208900405665 /* SceneDelegate.swift */,
+				889E6EF82904208900405665 /* ViewController.swift */,
+				889E6EFA2904208900405665 /* Main.storyboard */,
+				889E6F002904208A00405665 /* Assets.xcassets */,
+				889E6F022904208A00405665 /* LaunchScreen.storyboard */,
+				889E6F052904208A00405665 /* Info.plist */,
+				889E6EFD2904208900405665 /* Bloc.xcdatamodeld */,
+			);
+			path = Bloc;
+			sourceTree = "<group>";
+		};
+		889E6F0D2904208B00405665 /* BlocTests */ = {
+			isa = PBXGroup;
+			children = (
+				889E6F0E2904208B00405665 /* BlocTests.swift */,
+			);
+			path = BlocTests;
+			sourceTree = "<group>";
+		};
+		889E6F172904208B00405665 /* BlocUITests */ = {
+			isa = PBXGroup;
+			children = (
+				889E6F182904208B00405665 /* BlocUITests.swift */,
+				889E6F1A2904208B00405665 /* BlocUITestsLaunchTests.swift */,
+			);
+			path = BlocUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		889E6EF02904208900405665 /* Bloc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 889E6F1E2904208B00405665 /* Build configuration list for PBXNativeTarget "Bloc" */;
+			buildPhases = (
+				889E6EED2904208900405665 /* Sources */,
+				889E6EEE2904208900405665 /* Frameworks */,
+				889E6EEF2904208900405665 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bloc;
+			productName = Bloc;
+			productReference = 889E6EF12904208900405665 /* Bloc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		889E6F092904208B00405665 /* BlocTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 889E6F212904208B00405665 /* Build configuration list for PBXNativeTarget "BlocTests" */;
+			buildPhases = (
+				889E6F062904208B00405665 /* Sources */,
+				889E6F072904208B00405665 /* Frameworks */,
+				889E6F082904208B00405665 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				889E6F0C2904208B00405665 /* PBXTargetDependency */,
+			);
+			name = BlocTests;
+			productName = BlocTests;
+			productReference = 889E6F0A2904208B00405665 /* BlocTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		889E6F132904208B00405665 /* BlocUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 889E6F242904208B00405665 /* Build configuration list for PBXNativeTarget "BlocUITests" */;
+			buildPhases = (
+				889E6F102904208B00405665 /* Sources */,
+				889E6F112904208B00405665 /* Frameworks */,
+				889E6F122904208B00405665 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				889E6F162904208B00405665 /* PBXTargetDependency */,
+			);
+			name = BlocUITests;
+			productName = BlocUITests;
+			productReference = 889E6F142904208B00405665 /* BlocUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		889E6EE92904208800405665 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					889E6EF02904208900405665 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					889E6F092904208B00405665 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 889E6EF02904208900405665;
+					};
+					889E6F132904208B00405665 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 889E6EF02904208900405665;
+					};
+				};
+			};
+			buildConfigurationList = 889E6EEC2904208800405665 /* Build configuration list for PBXProject "Bloc" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 889E6EE82904208800405665;
+			productRefGroup = 889E6EF22904208900405665 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				889E6EF02904208900405665 /* Bloc */,
+				889E6F092904208B00405665 /* BlocTests */,
+				889E6F132904208B00405665 /* BlocUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		889E6EEF2904208900405665 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				889E6F042904208A00405665 /* LaunchScreen.storyboard in Resources */,
+				889E6F012904208A00405665 /* Assets.xcassets in Resources */,
+				889E6EFC2904208900405665 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		889E6F082904208B00405665 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		889E6F122904208B00405665 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		889E6EED2904208900405665 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				889E6EF92904208900405665 /* ViewController.swift in Sources */,
+				889E6EFF2904208900405665 /* Bloc.xcdatamodeld in Sources */,
+				889E6EF52904208900405665 /* AppDelegate.swift in Sources */,
+				889E6EF72904208900405665 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		889E6F062904208B00405665 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				889E6F0F2904208B00405665 /* BlocTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		889E6F102904208B00405665 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				889E6F1B2904208B00405665 /* BlocUITestsLaunchTests.swift in Sources */,
+				889E6F192904208B00405665 /* BlocUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		889E6F0C2904208B00405665 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 889E6EF02904208900405665 /* Bloc */;
+			targetProxy = 889E6F0B2904208B00405665 /* PBXContainerItemProxy */;
+		};
+		889E6F162904208B00405665 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 889E6EF02904208900405665 /* Bloc */;
+			targetProxy = 889E6F152904208B00405665 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		889E6EFA2904208900405665 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				889E6EFB2904208900405665 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		889E6F022904208A00405665 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				889E6F032904208A00405665 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		889E6F1C2904208B00405665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		889E6F1D2904208B00405665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		889E6F1F2904208B00405665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NFBC6BWM72;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bloc/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oqunet.Bloc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		889E6F202904208B00405665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NFBC6BWM72;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bloc/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oqunet.Bloc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		889E6F222904208B00405665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NFBC6BWM72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oqunet.BlocTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bloc.app/Bloc";
+			};
+			name = Debug;
+		};
+		889E6F232904208B00405665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NFBC6BWM72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oqunet.BlocTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bloc.app/Bloc";
+			};
+			name = Release;
+		};
+		889E6F252904208B00405665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NFBC6BWM72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oqunet.BlocUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bloc;
+			};
+			name = Debug;
+		};
+		889E6F262904208B00405665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NFBC6BWM72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oqunet.BlocUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bloc;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		889E6EEC2904208800405665 /* Build configuration list for PBXProject "Bloc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				889E6F1C2904208B00405665 /* Debug */,
+				889E6F1D2904208B00405665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		889E6F1E2904208B00405665 /* Build configuration list for PBXNativeTarget "Bloc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				889E6F1F2904208B00405665 /* Debug */,
+				889E6F202904208B00405665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		889E6F212904208B00405665 /* Build configuration list for PBXNativeTarget "BlocTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				889E6F222904208B00405665 /* Debug */,
+				889E6F232904208B00405665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		889E6F242904208B00405665 /* Build configuration list for PBXNativeTarget "BlocUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				889E6F252904208B00405665 /* Debug */,
+				889E6F262904208B00405665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		889E6EFD2904208900405665 /* Bloc.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				889E6EFE2904208900405665 /* Bloc.xcdatamodel */,
+			);
+			currentVersion = 889E6EFE2904208900405665 /* Bloc.xcdatamodel */;
+			path = Bloc.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 889E6EE92904208800405665 /* Project object */;
+}
