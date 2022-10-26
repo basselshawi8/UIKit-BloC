@@ -29,6 +29,8 @@
 		889E6F0F2904208B00405665 /* BlocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E6F0E2904208B00405665 /* BlocTests.swift */; };
 		889E6F192904208B00405665 /* BlocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E6F182904208B00405665 /* BlocUITests.swift */; };
 		889E6F1B2904208B00405665 /* BlocUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E6F1A2904208B00405665 /* BlocUITestsLaunchTests.swift */; };
+		88B239DA2909868F00B22357 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B239D92909868F00B22357 /* UserDefaults.swift */; };
+		88B239DC290986A700B22357 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B239DB290986A700B22357 /* UserDefaults.swift */; };
 		88BBE4D629081A540043BAA6 /* ActivityScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BBE4D529081A530043BAA6 /* ActivityScreen.swift */; };
 		88BBE4D829081B310043BAA6 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BBE4D729081B310043BAA6 /* ActivityView.swift */; };
 		88BBE4DA29081B850043BAA6 /* BaseBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BBE4D929081B850043BAA6 /* BaseBloc.swift */; };
@@ -86,6 +88,8 @@
 		889E6F142904208B00405665 /* BlocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		889E6F182904208B00405665 /* BlocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocUITests.swift; sourceTree = "<group>"; };
 		889E6F1A2904208B00405665 /* BlocUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		88B239D92909868F00B22357 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		88B239DB290986A700B22357 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		88BBE4D529081A530043BAA6 /* ActivityScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityScreen.swift; sourceTree = "<group>"; };
 		88BBE4D729081B310043BAA6 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		88BBE4D929081B850043BAA6 /* BaseBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBloc.swift; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				889B31A1290851AA008703EF /* DeclerativeExtensions.swift */,
+				88B239DB290986A700B22357 /* UserDefaults.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -349,6 +354,7 @@
 		88B239D729097D1900B22357 /* porpertyWrappers */ = {
 			isa = PBXGroup;
 			children = (
+				88B239D92909868F00B22357 /* UserDefaults.swift */,
 			);
 			path = porpertyWrappers;
 			sourceTree = "<group>";
@@ -622,6 +628,8 @@
 				8855A50329043BEB0059B213 /* GetActiviyParam.swift in Sources */,
 				8855A50F290448CA0059B213 /* ActivityEvent.swift in Sources */,
 				88BBE4D629081A540043BAA6 /* ActivityScreen.swift in Sources */,
+				88B239DC290986A700B22357 /* UserDefaults.swift in Sources */,
+				88B239DA2909868F00B22357 /* UserDefaults.swift in Sources */,
 				8855A50629043F070059B213 /* APIService.swift in Sources */,
 				8855A513290448EA0059B213 /* ActivityState.swift in Sources */,
 				889E6EFF2904208900405665 /* Bloc.xcdatamodeld in Sources */,

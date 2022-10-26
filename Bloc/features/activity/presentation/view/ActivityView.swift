@@ -19,7 +19,6 @@ class ActivityView:UIView {
     init(bloc:BaseBloc) {
         self.bloc = bloc
         super.init(frame: CGRect.zero)
-        //listenToState()
     }
     
     required init?(coder: NSCoder) {
@@ -40,7 +39,7 @@ class ActivityView:UIView {
             to: self.safeAreaLayoutGuide,
             insets: UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
         )
-        
+    
     }
     
     @objc func refresh() {
@@ -106,7 +105,7 @@ extension ActivityView {
 //MARK: - Bloc Listener
 
 extension ActivityView {
-    func listenToState(){
+    func listenToBloc(){
         
         let _ = BlocListener<ActivityBloc>.init { state in
             

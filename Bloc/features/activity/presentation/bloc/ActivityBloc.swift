@@ -24,7 +24,7 @@ class ActivityBloc : BaseBloc{
         if event is GetActivityEvent {
             mapGetActivityEvent(event: event as! GetActivityEvent)
         }
-        
+
     }
     
     func mapGetActivityEvent(event:GetActivityEvent) {
