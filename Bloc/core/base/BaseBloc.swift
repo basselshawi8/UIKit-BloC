@@ -55,7 +55,7 @@ class BlocListener<B : BaseBloc> {
                 return
             }
             self.listener(receivedState)
-      
+            
             
         }).store(in: &anyCanelable)
     }
@@ -104,6 +104,66 @@ class BlocBuilder<B : BaseBloc> : UIView {
                 make.left.equalToSuperview()
                 make.right.equalToSuperview()
             }
+            
+        }).store(in: &anyCanelable)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+class BlocConsumer<B : BaseBloc> : UIView {
+    
+    let bloc:BaseBloc?
+    let builder:(_ state:any BaseState)->UIView
+    let buildWhen:((_ prev:any BaseState, _ current: any BaseState)->Bool)?
+    
+    let listener:(_ state:any BaseState)->Void
+    let listenWhen:((_ prev:any BaseState, _ current: any BaseState)->Bool)?
+    
+    private var anyCanelable=Set<AnyCancellable>()
+    private var prevState:(any BaseState)?
+    
+    init(bloc: BaseBloc? = nil, builder: @escaping (_: any BaseState) -> UIView, buildWhen: @escaping (_: any BaseState, _: any BaseState) -> Bool,listener:@escaping (_: any BaseState) ->Void,listenWhen:@escaping (_: any BaseState, _: any BaseState) -> Bool) {
+        
+        if bloc == nil {
+            if let _bloc : B = ServiceLocator.shared.getService() {
+                self.bloc = _bloc
+            }
+            else {
+                self.bloc = bloc
+            }
+        }
+        else {
+            self.bloc = bloc
+        }
+        self.builder = builder
+        self.buildWhen = buildWhen
+        self.listener = listener
+        self.listenWhen = listenWhen
+        super.init(frame: CGRect.zero)
+        
+        self.bloc?.state?.sink(receiveValue: { receivedState in
+            let buildCondition = self.buildWhen == nil ? true : self.buildWhen!(self.prevState ?? receivedState,receivedState)
+            let listenCondition = self.listenWhen == nil ? true : self.listenWhen!(self.prevState ?? receivedState,receivedState)
+            
+            self.prevState = receivedState
+            if buildCondition == true {
+                let content = self.builder(receivedState)
+                self.removeAllSubViews()
+                self.addSubview(content)
+                content.snp.makeConstraints { make in
+                    make.top.equalToSuperview()
+                    make.bottom.equalToSuperview()
+                    make.left.equalToSuperview()
+                    make.right.equalToSuperview()
+                }
+            }
+            if listenCondition == true {
+                self.listener(receivedState)
+            }
+            
             
         }).store(in: &anyCanelable)
     }
