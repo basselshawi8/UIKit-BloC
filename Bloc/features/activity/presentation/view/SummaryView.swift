@@ -37,9 +37,10 @@ class SummaryView:UIView {
         super.layoutSubviews()
         textLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.width.equalTo(220)
+            make.width.equalTo(UIScreen.main.bounds.width)
             make.height.equalTo(30)
         }
+        textLabel.text = ""
        
     }
     

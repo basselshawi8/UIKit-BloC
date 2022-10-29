@@ -29,6 +29,7 @@ class ActivityView:UIView {
         super.didMoveToSuperview()
         self.bloc.addEvent(event: GetActivityEvent(param: GetActivityParam(name: "")))
         buildBloc()
+  
     }
     
     func addBody(_body:UIStackView) {
@@ -55,7 +56,25 @@ extension ActivityView {
             if state is GetActivitySuccessState {
                 
                 let successState = state as! GetActivitySuccessState
-                return UIStackView().vertical(spacing: 4).views(
+                return UIStackView().vertical(spacing: 0).views(
+                    UILabel().with({ instance in
+                        instance.text = successState.model.activity
+                        instance.textColor = .black
+                        
+                    }),
+                    UILabel().with({ instance in
+                        instance.text = successState.model.type
+                        instance.textColor = .black
+                    }),
+                    successState.model.link.isEmpty == true ? UIView() : UILabel().with({ instance in
+                        instance.text = successState.model.link
+                        instance.textColor = .black
+                    }),
+                    UIButton().with({ instance in
+                        instance.setTitle("Refresh", for: .normal)
+                        instance.setTitleColor(UIColor.systemBlue, for: .normal)
+                        instance.addTarget(self, action: #selector(self.refresh), for: .touchUpInside)
+                    }),
                     UILabel().with({ instance in
                         instance.text = successState.model.activity
                         instance.textColor = .black
@@ -64,7 +83,75 @@ extension ActivityView {
                         instance.text = successState.model.type
                         instance.textColor = .black
                     }),
-                    successState.model.type.isEmpty == true ? UIView() : UILabel().with({ instance in
+                    successState.model.link.isEmpty == true ? UIView() : UILabel().with({ instance in
+                        instance.text = successState.model.link
+                        instance.textColor = .black
+                    }),
+                    UIButton().with({ instance in
+                        instance.setTitle("Refresh", for: .normal)
+                        instance.setTitleColor(UIColor.systemBlue, for: .normal)
+                        instance.addTarget(self, action: #selector(self.refresh), for: .touchUpInside)
+                    }),
+                    UILabel().with({ instance in
+                        instance.text = successState.model.activity
+                        instance.textColor = .black
+                    }),
+                    UILabel().with({ instance in
+                        instance.text = successState.model.type
+                        instance.textColor = .black
+                    }),
+                    successState.model.link.isEmpty == true ? UIView() : UILabel().with({ instance in
+                        instance.text = successState.model.link
+                        instance.textColor = .black
+                    }),
+                    UIButton().with({ instance in
+                        instance.setTitle("Refresh", for: .normal)
+                        instance.setTitleColor(UIColor.systemBlue, for: .normal)
+                        instance.addTarget(self, action: #selector(self.refresh), for: .touchUpInside)
+                    }),
+                    UILabel().with({ instance in
+                        instance.text = successState.model.activity
+                        instance.textColor = .black
+                    }),
+                    UILabel().with({ instance in
+                        instance.text = successState.model.type
+                        instance.textColor = .black
+                    }),
+                    successState.model.link.isEmpty == true ? UIView() : UILabel().with({ instance in
+                        instance.text = successState.model.link
+                        instance.textColor = .black
+                    }),
+                    UIButton().with({ instance in
+                        instance.setTitle("Refresh", for: .normal)
+                        instance.setTitleColor(UIColor.systemBlue, for: .normal)
+                        instance.addTarget(self, action: #selector(self.refresh), for: .touchUpInside)
+                    }),
+                    UILabel().with({ instance in
+                        instance.text = successState.model.activity
+                        instance.textColor = .black
+                    }),
+                    UILabel().with({ instance in
+                        instance.text = successState.model.type
+                        instance.textColor = .black
+                    }),
+                    successState.model.link.isEmpty == true ? UIView() : UILabel().with({ instance in
+                        instance.text = successState.model.link
+                        instance.textColor = .black
+                    }),
+                    UIButton().with({ instance in
+                        instance.setTitle("Refresh", for: .normal)
+                        instance.setTitleColor(UIColor.systemBlue, for: .normal)
+                        instance.addTarget(self, action: #selector(self.refresh), for: .touchUpInside)
+                    }),
+                    UILabel().with({ instance in
+                        instance.text = successState.model.activity
+                        instance.textColor = .black
+                    }),
+                    UILabel().with({ instance in
+                        instance.text = successState.model.type
+                        instance.textColor = .black
+                    }),
+                    successState.model.link.isEmpty == true ? UIView() : UILabel().with({ instance in
                         instance.text = successState.model.link
                         instance.textColor = .black
                     }),
@@ -73,7 +160,10 @@ extension ActivityView {
                         instance.setTitleColor(UIColor.systemBlue, for: .normal)
                         instance.addTarget(self, action: #selector(self.refresh), for: .touchUpInside)
                     })
-                )
+                ).with { instance in
+                    instance.alignment = .leading
+                    instance.distribution = .fillProportionally
+                }
             }
             else if state is GetActivityWaitingState {
                 return UILabel().with({ instance in
@@ -91,14 +181,25 @@ extension ActivityView {
             return current is GetActivitySuccessState || current is GetActivityWaitingState ? true : false
         }
         
-        self.addSubview(blocBuilder)
-        blocBuilder.snp.makeConstraints { make in
-            make.top.equalToSuperview()
+        let scrollView = UIScrollView()
+        scrollView.isUserInteractionEnabled = true
+        scrollView.showsVerticalScrollIndicator = false
+        self.addSubview(scrollView)
+        scrollView.addSubview(blocBuilder)
+        scrollView.snp.makeConstraints { make in
             make.left.equalToSuperview()
             make.right.equalToSuperview()
+            make.top.equalToSuperview()
             make.bottom.equalToSuperview()
         }
-        
+        blocBuilder.snp.makeConstraints { make in
+            make.width.equalToSuperview()
+            
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
     }
 }
 
@@ -113,7 +214,7 @@ extension ActivityView {
                 
                 let successState = state as! GetActivitySuccessState
                 
-                self.addBody(_body: UIStackView().vertical(spacing: 20).views(
+                self.addBody(_body: UIStackView().vertical(spacing: 0).views(
                     UILabel().with({ instance in
                         instance.text = successState.model.activity
                         instance.textColor = .black
@@ -135,6 +236,7 @@ extension ActivityView {
                 
             }
             else if state is GetActivityFailureState {
+                
                 
                 self.addBody(_body: UIStackView().vertical(spacing: 20).views(
                     

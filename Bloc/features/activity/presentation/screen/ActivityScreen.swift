@@ -26,8 +26,9 @@ class ActivityScreen : UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         activityView!.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-            make.width.equalTo(200)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.top.equalToSuperview()
             make.height.equalTo(500)
         }
     }

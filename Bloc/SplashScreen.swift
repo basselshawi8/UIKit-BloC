@@ -34,6 +34,7 @@ class SplashScreen: UIViewController {
             make.right.equalToSuperview()
             make.height.equalTo(50)
         })
+        
     }
     
 }

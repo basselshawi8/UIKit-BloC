@@ -70,8 +70,8 @@ class BlocBuilder<B : BaseBloc> : UIView {
     let bloc:BaseBloc?
     let builder:(_ state:any BaseState)->UIView
     let buildWhen:(_ prev:any BaseState, _ current: any BaseState)->Bool
-    private var anyCanelable=Set<AnyCancellable>()
-    private var prevState:(any BaseState)?
+    internal var anyCanelable=Set<AnyCancellable>()
+    internal var prevState:(any BaseState)?
     
     init(bloc: BaseBloc? = nil, builder: @escaping (_: any BaseState) -> UIView, buildWhen: @escaping (_: any BaseState, _: any BaseState) -> Bool) {
         
@@ -113,53 +113,24 @@ class BlocBuilder<B : BaseBloc> : UIView {
     }
 }
 
-class BlocConsumer<B : BaseBloc> : UIView {
-    
-    let bloc:BaseBloc?
-    let builder:(_ state:any BaseState)->UIView
-    let buildWhen:((_ prev:any BaseState, _ current: any BaseState)->Bool)?
+class BlocConsumer<B:BaseBloc>:BlocBuilder<B>  {
     
     let listener:(_ state:any BaseState)->Void
     let listenWhen:((_ prev:any BaseState, _ current: any BaseState)->Bool)?
     
-    private var anyCanelable=Set<AnyCancellable>()
-    private var prevState:(any BaseState)?
+
     
     init(bloc: BaseBloc? = nil, builder: @escaping (_: any BaseState) -> UIView, buildWhen: @escaping (_: any BaseState, _: any BaseState) -> Bool,listener:@escaping (_: any BaseState) ->Void,listenWhen:@escaping (_: any BaseState, _: any BaseState) -> Bool) {
         
-        if bloc == nil {
-            if let _bloc : B = ServiceLocator.shared.getService() {
-                self.bloc = _bloc
-            }
-            else {
-                self.bloc = bloc
-            }
-        }
-        else {
-            self.bloc = bloc
-        }
-        self.builder = builder
-        self.buildWhen = buildWhen
         self.listener = listener
         self.listenWhen = listenWhen
-        super.init(frame: CGRect.zero)
-        
+        super.init(bloc:bloc, builder: builder, buildWhen: buildWhen)
+    
         self.bloc?.state?.sink(receiveValue: { receivedState in
-            let buildCondition = self.buildWhen == nil ? true : self.buildWhen!(self.prevState ?? receivedState,receivedState)
             let listenCondition = self.listenWhen == nil ? true : self.listenWhen!(self.prevState ?? receivedState,receivedState)
             
             self.prevState = receivedState
-            if buildCondition == true {
-                let content = self.builder(receivedState)
-                self.removeAllSubViews()
-                self.addSubview(content)
-                content.snp.makeConstraints { make in
-                    make.top.equalToSuperview()
-                    make.bottom.equalToSuperview()
-                    make.left.equalToSuperview()
-                    make.right.equalToSuperview()
-                }
-            }
+          
             if listenCondition == true {
                 self.listener(receivedState)
             }
